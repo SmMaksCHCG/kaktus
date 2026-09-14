@@ -1,13 +1,14 @@
 import type { NextConfig } from "next";
 
 const isGithubPages = process.env.GITHUB_PAGES === "true";
+const isStatic = isGithubPages || process.env.STATIC_EXPORT === "true";
 
 const nextConfig: NextConfig = {
-  output: isGithubPages ? "export" : undefined,
-  trailingSlash: isGithubPages,
+  output: isStatic ? "export" : undefined,
+  trailingSlash: isStatic,
   basePath: isGithubPages ? "/kaktus" : undefined,
   images: {
-    unoptimized: isGithubPages,
+    unoptimized: isStatic,
     remotePatterns: [
       {
         protocol: "https",

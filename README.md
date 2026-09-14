@@ -15,7 +15,13 @@
 
 Стек: Next.js, TypeScript, Tailwind, shadcn/ui.
 
-Сайт публикуется на GitHub Pages из ветки `main` (Actions). Если ссылка ещё отдаёт 404, один раз включите Pages: **Settings → Pages → Source → GitHub Actions**.
+Сайт собирается Actions и кладётся в ветку `gh-pages`. Чтобы ссылка открывалась у всех, один раз включите хостинг:
+
+1. Откройте [Settings → Pages](https://github.com/SmMaksCHCG/kaktus/settings/pages)
+2. **Build and deployment → Source:** Deploy from a branch
+3. **Branch:** `gh-pages` / `/ (root)` → Save
+
+После этого адрес работает постоянно: [https://smmakschcg.github.io/kaktus/](https://smmakschcg.github.io/kaktus/)
 
 ## Запуск локально
 
